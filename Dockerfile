@@ -1,5 +1,3 @@
-RUN chmod +x mvnw
-
 # Use uma imagem do OpenJDK para construir a aplicação
 FROM openjdk:11 AS builder
 
@@ -8,6 +6,7 @@ WORKDIR /app
 COPY . .
 
 # Use o Maven para construir o projeto
+RUN chmod +x mvnw
 RUN ./mvnw clean install
 
 # Use uma imagem do OpenJDK mínima como base
