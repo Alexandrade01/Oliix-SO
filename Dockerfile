@@ -1,3 +1,5 @@
+RUN chmod +x mvnw
+
 # Use uma imagem do OpenJDK para construir a aplicação
 FROM openjdk:11 AS builder
 
